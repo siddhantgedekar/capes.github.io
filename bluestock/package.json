@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.47.5",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "csv-parse": "^6.1.0",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.3",
+    "nodemon": "^3.1.10",
+    "pg": "^8.16.3",
+    "react-toastify": "^11.0.5",
+    "vite": "^7.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon run backend/server.js"
+  },
+  "type": "module",
+  "name": "bluestock_ipo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "bcrypt": "^6.0.0"
+  }
+}

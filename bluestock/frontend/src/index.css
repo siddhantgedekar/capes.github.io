@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'poppins', 'open-sans';
+}
+
+#root {
+    height: 100vh;
+}
+
+.text-shadow {
+    text-shadow: 0px 3px 1px lightgrey;
+}
+
+.gradient {
+    background: linear-gradient(to top, #4200FF, #AD00FF);
+    background-clip: text;
+    color: transparent;
+}
+
+.circle {
+    background: #3CBB00;
+    align-content: center;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    height: 20px;
+    width: 20px;
+}
+
+.learnChart {
+    background-color: #F7F5FD;
+}
+
+.analytics {
+    background-color: #FFECEC;
+}
+
+.clubChart {
+    background-color: #FFF0DB;
+}
+
+.h {
+    min-height: 250px;
+}
+
+.image {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #67F4E000 10%, #51EAD4 70%);
+}
+
+.c {
+    background-color: #FFF0DB;
+}
+.c1 {
+    background-color: #F7F5FD;
+}
+.c2 {
+    background-color: #FFECEC;
+}
+
+.c5 {
+    padding: 0 10px;
+    background-color: #E1EFFF;
+}
+
+.contain-bottom {
+    align-items: end;
+}
+
+.live-section {
+    background-color: #EFF4FF;
+}
+
+.circleFace {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    margin-left: -30px;
+    overflow: hidden;
+    justify-content: center;
+    border: 1px solid #EFF4FF;
+    border-width: 5px;
+}
+
+.compare {
+    margin-top: 30px;
+    padding-top: 30px;
+    background-color: #7EFED30F;
+}
+
+.dropdown1 {
+    color: black;
+    border: 0px;
+    background-color: #E2E5FF;
+}
+
+.accord {
+    background-color: #F4F3F9;
+}
+
+.inpBorder {
+    border: 1px solid grey;
+}
+
+.downloads {
+    color: #FFC902;
+}
+
+.phone {
+    height: 340px;
+    overflow: hidden;
+}
+
+.warning {
+    background-color: #F5FAFF;
+}
+
+.tech-platform {
+    background-color: #F8FBFF;
+}
+
+.diversity {
+    background-color: #E2FFF0;
+}
+
+.box {
+    height: 70px;
+    width: 70px;
+}
+.box2 {
+    background-color: #E8FFE4;
+}
+.box1 {
+    background-color: #E8E4FF;
+}
+.box0 {
+    background-color: #FFE4E4;
+}
+
+.growth {
+    background-color: #E3E2FF;
+}
+
+.msg {
+    position: absolute;
+    border: 1px dashed black;
+    height: 500px;
+    width: 300px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount {
+    margin-top: 200px;
+}
+.checklist {
+    list-style-type: \2714;
+}
+
+.circleFace1{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    border: 1px solid #EFF4FF;
+    border-width: 5px;
+}
+
+.floating {
+    background: linear-gradient(to bottom, #E3E4EC, white);
+    height: 150px;
+    text-align: center;
+    margin-left: -15px;
+    border: 1px solid linear-gradient(to bottom, lightgrey, white);
+    border-bottom: none;
+}
+
+.community-list {
+    list-style: circle;
+}
+
+.list-circle {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 50%;
+}
+
+.sh {
+    /* border-radius: 1px; */
+    box-shadow: inset 7px 7px 3px lightgrey;
+}
+
+.bg-gold {
+    background-color: goldenrod;
+    border-color: transparent;
+    box-shadow: inset 3px 3px 5px grey;
+    color: black;
+}
+.msg-2 {
+    margin-top: -170px;
+    margin-left: 40px;
+    height: 190px;
+    z-index: -2;
+}
+.msg-3{
+    margin-top: -170px;
+    margin-left: 60px;
+    height: 190px;
+    z-index: -2;
+}.msg-4{
+    margin-top: -170px;
+    margin-left: 80px;
+    height: 190px;
+    z-index: -2;
+}.msg-5{
+    margin-top: -170px;
+    margin-left: 100px;
+    height: 190px;
+    z-index: -2;
+}
+.margin {
+    z-index: 1;
+}
+.traders-text {
+    color: #C83E4B;
+}
+.traders-text1 {
+    color: black;
+}
+.traders-text2 {
+    color: maroon;
+}
+.traders-text21 {
+    color: blue;
+}
+.card-set{
+    background-color: #F3F5FFE5;
+}
+
+.details-img {
+    width: 75%;
+    height: 180px;
+}
+.post1 {
+    width: 100%;
+    height: 250px;
+}
+.post2 {
+    width: 100%;
+    height: 150px;
+}
+.table {
+    border: 1px solid lightgray;
+    margin: 0px;
+    padding: 10px 1px;
+    background-color: #EFEFEF;
+}
+.table1 {
+    border: 1px solid lightgray;
+    margin: 0px;
+    padding: 15px 1px;
+    align-items: center;
+    background-color: #EFEFEF;
+}
+.sector-card {
+    background: linear-gradient(to bottom, #6FA5FD, white);
+    border: 1px solid black;
+    box-shadow: 0px 5px 5px lightgrey;
+    border-radius: 5%;
+    height: 100%;
+}
+.whitecircle {
+    background-color: white;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blue-square {
+    width: calc(100%, 435px);
+    height: 344px;
+    background-color: #D2DAFF;
+}
+.nifty-head {
+    border: 1px solid black;
+}
+.nifty-text {
+    border: 1px solid black;
+}
+
+.stock-card {
+    border: 4px solid transparent;
+    border-image: linear-gradient(to bottom, #29B5AC61, #FF84EB80, #FFC683C9) 1;
+    height: 100%;
+    width: 555px;
+}
+.cate-card {
+    width: 110px;
+    height: 110px;
+}
+.red-square {
+    width: calc(100%, 435px);
+    height: 344px;
+    background-color: #FFC7C7;
+}
+.techpage-card {
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #F7FF95BA, #9BFFFF8A, #FF03F559) border-box;
+}
+.analysis-card {
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(to bottom, #9BFFFF8A, #FF03F559) border-box;
+}
+.ipos {
+    border: 1px solid black;
+}
+.ipo-header {
+    border: 1px solid black;
+}
+.tech-image {
+    width: 469px;
+    height: 247px;
+}
+.hammer {
+    background-image: url('./hammer.jpg');
+    background-position: 48% 55%;
+    background-size: 110% 138%;
+    width: 692px;
+    height: 306px;
+}
+.stick-head {
+    width: 200px;
+}
+.candle {
+    position: relative;
+    width: 30px;
+    height: 100px;
+}
+.stick {
+    position: absolute;
+    width: 2px;
+    height: 140px;
+    top: -19px;
+    left: 14px;
+}
