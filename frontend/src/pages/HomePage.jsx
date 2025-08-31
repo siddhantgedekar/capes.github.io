@@ -65,36 +65,35 @@ const HomePage = () => {
         setModal(false);
     }
 
-
     return (
         <div className="container">
             <Navbars />
             <div className="content m-0 row d-flex justify-content-between align-items-center flex-column my-2">
-                {task.map((items) => {
-                    return (
-                        !task ?
-                        <div className="header fw-bold text-center my-2">Create a task</div>
-                        :
-                        <Card className="p-0 border-0 shadow-sm my-2" key={items._id}>
-
-                            <Card.Header className={`fw-bold text-wrap text-decoration-${items.complete === "true" ? "line-through" : "none"}`}>{items.title}</Card.Header>
-                            
-                            <Card.Body className="bg-primary-subtle row d-flex justify-content-between align-items-center m-0">
-
-                                <Card.Text className={`"text-wrap col-lg-10 col-md-12 fs-italic m-auto text-decoration-${items.complete === "true" ? "line-through" : "none" }`}>
-                                    {items.task}
-                                </Card.Text>
-
-                                <Card.Text className="col-lg-2 col-md-12">
-                                    <Button className="btn btn-danger border-0 mx-2" onClick={() => removeTask(items._id)}>Delete</Button>
-                                    {/* <input type="checkbox" onClick={(e) => onCheckClick(items._id, tempTask)} checked={items.complete === "true" ? true : false} onChange={(e) => {setTempTask({...tempTask, _id: items._id, title: items.title, task: items.task, complete: e.target.checked})}} /> */}
-                                    <input type="checkbox" onChange={(e) => onCheckClick(items._id, {...items, _id: items._id, title: items.title, task: items.task, complete: e.target.checked}, e)} checked={items.complete === "true" ? true : false} />
-                                </Card.Text>
-
-                            </Card.Body>
-                        </Card>
-                    )
-                })}
+                {
+                    (task.length === 0) ? (
+                        <div className="header fw-bold text-center my-2 bg-white p-2 rounded">Create a task</div>
+                    ) : (
+                        task.map((items) => (
+                            <Card className="p-0 border-0 shadow-sm my-2" key={items._id}>
+    
+                                <Card.Header className={`fw-bold text-wrap text-decoration-${items.complete === "true" ? "line-through" : "none"}`}>{items.title}</Card.Header>
+                                
+                                <Card.Body className="bg-primary-subtle row d-flex justify-content-between align-items-center m-0">
+    
+                                    <Card.Text className={`"text-wrap col-lg-10 col-md-12 fs-italic m-auto text-decoration-${items.complete === "true" ? "line-through" : "none" }`}>
+                                        {items.task}
+                                    </Card.Text>
+    
+                                    <Card.Text className="col-lg-2 col-md-12">
+                                        <Button className="btn btn-danger border-0 mx-2" onClick={() => removeTask(items._id)}>Delete</Button>
+                                        {/* <input type="checkbox" onClick={(e) => onCheckClick(items._id, tempTask)} checked={items.complete === "true" ? true : false} onChange={(e) => {setTempTask({...tempTask, _id: items._id, title: items.title, task: items.task, complete: e.target.checked})}} /> */}
+                                        <input type="checkbox" onChange={(e) => onCheckClick(items._id, {...items, _id: items._id, title: items.title, task: items.task, complete: e.target.checked}, e)} checked={items.complete === "true" ? true : false} />
+                                    </Card.Text>
+    
+                                </Card.Body>
+                            </Card>
+                        )
+                    ))}
             </div>
 
             <div className='text-end'>

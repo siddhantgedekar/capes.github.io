@@ -4,7 +4,7 @@ import { toast } from 'react-toastify';
 import { useState } from 'react';
 
 const Signin = () => {
-    const { createUser } = userStore();
+    const { login, createUser } = userStore();
     const [isLogin, setIsLogin] = useState("block");
     const [isReg, setIsReg] = useState("none");
     const [newUser, setNewUser] = useState({
@@ -19,8 +19,19 @@ const Signin = () => {
     });
 
     const handleOnSubmit = async () => {
+        // register user
         const { success, message } = await createUser(newUser);
-
+        // notify
+        if(success) {
+            toast.success(message);
+        } else {
+            toast.error(message);
+        }
+    }
+    const handleLogin = async () => {
+        // login user
+        const { success, message } = await login(newUser);
+        // notify
         if(success) {
             toast.success(message);
         } else {
@@ -35,9 +46,6 @@ const Signin = () => {
   return (
     <div className='vh-100 row d-flex justify-content-center align-items-center m-0'>
         <div className="container col-lg-6 col-md-10">
-            {
-
-            }
             <Form className={`bg-white rounded p-3 d-${isLogin}`}>
                 <div className='d-flex justify-content-between align-items-center'>
                     <h3>Registration</h3>
@@ -83,7 +91,7 @@ const Signin = () => {
                     <Form.Control type="password" placeholder="Password" onChange={(e) => {setNewUser({...newUser, password: e.target.value})}}/>
                 </Form.Group>
                 
-                <Button variant="primary" className="mt-2" onClick={ handleOnSubmit }>Submit</Button>
+                <Button variant="primary" className="mt-2" onClick={ handleLogin }>Login</Button>
             </Form>
         </div>
     </div>

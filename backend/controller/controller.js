@@ -1,5 +1,6 @@
 import User from '../model/userModel.js';
 import Task from '../model/model.js';
+import bcrypt from 'bcrypt';
 
 export const createTask = async (req, res) => {
     const task = req.body;
@@ -62,6 +63,11 @@ export const createUser = async (req, res) => {
         if(existingUser) {
             return res.status(200).json({ success: false, message: 'user already exist' });
         }
+
+        // generate salt
+        const salt = await bcrypt.genSalt(10);
+        // hash password
+        user.password = await bcrypt.hash(user.password, salt);
         
         const newUser = new User(user);
         await newUser.save();
@@ -90,5 +96,29 @@ export const deleteUser = async (req, res) => {
         res.status(200).json({ success: true, message: "User deleted" });
     } catch (error) {
         res.status(200).json({ success: false, message: "Failed to delete user" });
+    }
+}
+
+export const loginUser = async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const user = await User.findOne({ email });
+        if(!user) {
+            return res.status(200).json({ success: false, message: "User not found" });
+        }
+
+        // generate salt
+        const salt = await bcrypt.genSalt(10);
+        // hash password
+        const isMatch = await bcrypt.hash(password, salt);
+
+        if(isMatch !== user.password) {
+            return res.status(200).json({ success: false, message: "Invalid credentials" });
+        }
+
+        res.status(200).json({ success: true, message: "Login successful", data: user });
+    } catch (error) {
+        res.status(500).json({ success: false, message: "Login failed" });
     }
 }

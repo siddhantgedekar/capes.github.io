@@ -108,5 +108,21 @@ export const userStore = create((set) => ({
         } catch (error) {
             return { success: false, message: "failed to delete user" };
         }
+    },
+    login: async (newUser) => {
+        const res = await fetch('/api/todo/user');
+        const data = await res.json();
+
+        if(!res.ok) {
+            return { success: false, message: "Login failed" };
+        }
+
+        const user = data.data.find((user) => user.email === newUser.email);
+        if(!user) {
+            return { success: false, message: "User not found" };
+        }
+
+        set({user: [user]});
+        return { success: true, message: "Login successful", data: user };
     }
 }));
