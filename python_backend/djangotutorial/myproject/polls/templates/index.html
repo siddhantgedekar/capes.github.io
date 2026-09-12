@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="register">Register</a>
+    <form action="counter" method="POST" class="h-100 w-100">
+        {% csrf_token %}
+        <textarea name="text" id="" cols="30" rows="10"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    {% for item in feature %}
+    <div>
+        Features
+        <ul>
+            <li>{{item.name}}</li>
+            <li>{{item.detail}}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</body>
+</html>
